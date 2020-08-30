@@ -1,0 +1,254 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Deedy - One Page Two Column Resume
+% LaTeX Template
+% Version 1.2 (16/9/2014)
+%
+% Original author:
+% Debarghya Das (http://debarghyadas.com)
+%
+% Original repository:
+% https://github.com/deedydas/Deedy-Resume
+%
+% IMPORTANT: THIS TEMPLATE NEEDS TO BE COMPILED WITH XeLaTeX
+%
+% This template uses several fonts not included with Windows/Linux by
+% default. If you get compilation errors saying a font is missing, find the line
+% on which the font is used and either change it to a font included with your
+% operating system or comment the line out to use the default font.
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 
+% TODO:
+% 1. Integrate biber/bibtex for article citation under publications.
+% 2. Figure out a smoother way for the document to flow onto the next page.
+% 3. Add styling information for a "Projects/Hacks" section.
+% 4. Add location/address information
+% 5. Merge OpenFont and MacFonts as a single sty with options.
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% CHANGELOG:
+% v1.1:
+% 1. Fixed several compilation bugs with \renewcommand
+% 2. Got Open-source fonts (Windows/Linux support)
+% 3. Added Last Updated
+% 4. Move Title styling into .sty
+% 5. Commented .sty file.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Known Issues:
+% 1. Overflows onto second page if any column's contents are more than the
+% vertical limit
+% 2. Hacky space on the first bullet point on the second column.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\documentclass[]{resume-openfont}
+\usepackage{fancyhdr}
+
+
+\fancyfoot{}
+\pagestyle{fancy}
+\fancyhf{}
+
+
+
+ 
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     LAST UPDATED DATE
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\lastupdated
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     TITLE NAME
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\namesection{Mihir}{Wadekar}{ \urlstyle{same}\href{http://mw2000.github.io}{mw2000.github.io}\\
+\href{mailto:mpwadekar@ucdavis.edu}{mpwadekar@ucdavis.edu} | 408.647.0270 | \href{mailto:mwadekar2000@gmail.com}{mwadekar2000@gmail.com}
+}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     COLUMN ONE
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{minipage}[t]{0.33\textwidth}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     EDUCATION
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Education} 
+
+\subsection{University of \\ California, Davis}
+\descript{BS in Computer Science}
+\location{June 2022 | Davis, CA}
+College of Engineering | College of \\ Letters and Science \\
+\location{ \bf{GPA:} 3.69 / 4.0 \\}
+\location{\bf{Dean's Honors List:} \\ Winter 2019 \textbullet{} Spring 2019 \\ \textbullet{} Fall 2019 \textbullet{} Spring 2020}
+\sectionsep
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     LINKS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Links} 
+Github:// \href{https://github.com/mw2000}{\bf mw2000} \\
+LinkedIn://  \href{https://www.linkedin.com/in/mihirwadekar/}{\bf mihirwadekar} \\
+Twitter://  \href{https://twitter.com/that\_one\_nerdy\_}{\bf @that\_one\_nerdy\_} \\
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     COURSEWORK
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Coursework}
+Software Development and OOP \\
+Data Structures and Algorithms \\
+Operating Systems \\
+Artificial Intelligence \\
+Computer Security \\
+Computer Architecture \\
+\sectionsep
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     SKILLS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Skills}
+\subsection{Languages}
+\location{Over 5000 lines:}
+C++ \textbullet{}  Python \textbullet{} Javascript \textbullet{} HTML5 \\
+\location{Familiar:}
+Solidity \textbullet{} Rust \textbullet{} x86 Assembly \textbullet{} Go\\
+
+\vspace{5mm} %5mm vertical space
+
+\subsection{Frameworks}
+NodeJS \textbullet{} React Native \textbullet{} Arduino \textbullet{} \\ VueJS \textbullet{} Firebase
+\sectionsep
+
+
+\section{Student Orgs}
+\runsubsection{\href{https://blockchainatdavis.io}{Blockchain At \\Davis}}
+\descript{| President}
+\vspace{5mm}
+\runsubsection{\href{https://spaceandsatellitesystems.com}{Space and Satellite\\ Systems}}
+\descript{| Software Lead}
+\vspace{5mm}
+\sectionsep
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     COLUMN TWO
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{minipage} 
+\hfill
+\begin{minipage}[t]{0.66\textwidth} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     EXPERIENCE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Experience}
+\runsubsection{\href{https://mwadekar2000.wixsite.com/plasticoin/}{PlastiCoin}}
+\descript{| Co-Founder }
+\location{Oct 2018 - Apr 2020 | Davis, CA}
+\vspace{\topsep} % Hacky fix for awkward extra vertical space
+\begin{tightemize}
+\item Started a blockchain startup to incentivize waste recycling.
+\item Managed a team of 5+ people.
+\item Built an application and an ERC20 token, using React Native and Solidity respectively.
+\end{tightemize}
+\sectionsep
+
+\runsubsection{\href{http://cateno.io/}{Cateno: ICO Governance Platform}}
+\descript{| Founding Engineer }
+\location{July 2019 – Nov 2019 | San Francisco, CA}
+\begin{tightemize}
+\item Helped take key startup decisions.
+\item Built front end using VueJS and used Firebase for user authentication. 
+\item Used web3 to connect exisiting smart contracts with the front end.
+\end{tightemize}
+\sectionsep
+
+\runsubsection{\href{http://www.flairminds.com/}{Flair Minds Software Solutions}}
+\descript{| Front-End Intern }
+\location{Aug 2019 – Sep 2019 | Pune, India}
+\begin{tightemize}
+\item Designed web applications with Material UI.
+\item Used Angular 8 to write services and connect to an SQL database.
+\item Developed software using the SCRUM methodology.
+\end{tightemize}
+\sectionsep
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     RESEARCH
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Research}
+\runsubsection{\href{https://expolab.org/}{Expo Lab}}
+\descript{| Undergraduate Researcher}
+\location{Feb 2019 – June 2019 | Davis, CA}
+Researched real-world applications of blockchain in sustainability and waste management under Dr. Mohammed Sadoghi.
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     PROJECTS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Projects}
+
+%\runsubsection{\href{https://github.com/uc-davis-space-and-satellite-systems/efos}{Flight Operating System}}
+%\descript{}
+%\begin{tightemize}
+%\item Developed as a part of the Space and Satellite Subsystems CS/Software team.
+%\item Enables autonomous determination, control, operation, and communications of the UC Davis 'Spaceblock' CubeSAT.
+%\item Made using Python3.
+%\end{tightemize}
+%\sectionsep
+
+\runsubsection{\href{https://github.com/mw2000/DAG/}{Decentralized Autonomous Governance}}
+\descript{}
+\begin{tightemize}
+\item A governance platform based on allowing people to make their own propositions, vote on them  and govern themselves.
+\item Used solidity to make the collection of smart contracts on an Ethereum testnet, comprising the platform.
+\item Can be applied to university student governments.
+\end{tightemize}
+\sectionsep
+
+\runsubsection{\href{https://github.com/mw2000/Injecto}{Injecto}}
+\descript{}
+\begin{tightemize}
+\item A governance platform based on allowing people to make their own propositions, vote on them  and govern themselves.
+\item Used solidity to make the collection of smart contracts on an Ethereum testnet, comprising the platform.
+\item Can be applied to university student governments.
+\end{tightemize}
+\sectionsep
+
+\sectionsep
+
+
+\section{Teaching}
+\runsubsection{ECS 189F - Databases}
+\descript{}
+Developed curriculum for an open source blockchain class to be taught at UC Davis in Fall 2020, along with Blockchain at Davis, Blockchain Acceleration Foundation and Dr. Mohammad Sadoghi.
+\sectionsep
+\sectionsep
+
+
+\end{minipage} 
+\end{document}  \documentclass[]{article}
